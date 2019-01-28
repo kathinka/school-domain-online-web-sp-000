@@ -8,27 +8,23 @@ def initialize(name)
   @roster = {}
 end
 
-def roster=(name, grade)
-  if roster.include?(grade) 
-    roster[grade] << name 
+def roster=(student, grade)
+  if roster.include?(grade)
+    roster[grade] << student
   else
      roster[grade] = []
-     roster[grade] << name
+     roster[grade] << student
    end
 end
 
 def roster
-  @roster 
+  @roster
 end
 
-def add_student=(grade, name)
-  @name = name
+def add_student=(grade, student)
+  @student = student
   @grade = grade
-  roster=(name, grade)
-  #if roster.include?(grade) 
-  #  roster[grade] << name 
-  #else
-  #   roster[grade] = []
-  #   roster[grade] << name
-  # end
+  roster
+end
+
 end
